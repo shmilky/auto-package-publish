@@ -1,0 +1,12 @@
+{
+  "name": "auto-package-publish",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./src/publishPackage.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "compare-versions": "^3.0.1",
+    "node-cmd": "^3.0.0"
+  }
+}
