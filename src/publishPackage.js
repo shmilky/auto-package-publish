@@ -4,9 +4,21 @@ const verComparator = require('compare-versions'); // Compares version, i.e. 1.4
 
 const getAsync = Promise.promisify(cmd.get, {multiArgs: true, context: cmd});
 
+function emptyPromise () {
+    return new Promise(function (succCB){
+        succCB();
+    });
+}
+
 module.exports = function (packageJson, beforePublishing, afterPublishing) {
     if (!packageJson || !packageJson.version) {
         throw ('Received package json file is not valid');
+    }
+
+    if (!beforePublishing) {
+        console.log('Missing and  expected input promise methods, will use empty promise instead');
+        beforePublishing = emptyPromise;
+        afterPublishing = emptyPromise;
     }
 
     const currPackageVersion = packageJson.version;
