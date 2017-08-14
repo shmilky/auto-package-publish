@@ -18,7 +18,7 @@ module.exports = function (packageJson, beforePublishing, afterPublishing) {
 
         const currPublishedVersion = data[0].replace(/[^0-9$.,]/g, '');
 
-        console.log('Current published version is ' + currPublishedVersion + ', current package version is ${currPackageVersion}');
+        console.log('Current published version is ' + currPublishedVersion + ', current package version is '+ currPackageVersion);
 
         if (verComparator(currPackageVersion, currPublishedVersion) < 1) {
             console.log('No need to publish package');
