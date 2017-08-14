@@ -1,12 +1,12 @@
 
-##Auto publishing npm packages
+## Auto publishing npm packages
 
 A simple tool to combine with a CI-CD system to auto publish npm packages in the build process.
 
-####VERY IMPORTANT
+#### VERY IMPORTANT
 The executable must be in the same folder as the package package.json file since it uses ```npm publish``` command which require it.
 
-####Usage Example
+#### Usage Example
 ```javascript
 const publisher = require('auto-package-publisher');
 
