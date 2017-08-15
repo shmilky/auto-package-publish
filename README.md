@@ -4,7 +4,10 @@
 A simple tool to combine with a CI-CD system to auto publish npm packages in the build process.
 
 #### VERY IMPORTANT
-The executable must be in the same folder as the package package.json file since it uses ```npm publish``` command which require it.
+>The executable must be in the same folder as the package package.json file since it uses ```npm publish``` command which require it.
+
+>Part of the publishing process is a check for the current published version, for this the package must be already published.
+>For first time publishing you should do it manually with simple ```npm publish```
 
 #### Usage Example
 ```javascript
